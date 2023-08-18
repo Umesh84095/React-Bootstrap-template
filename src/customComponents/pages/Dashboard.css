@@ -1,0 +1,104 @@
+body {
+    background: lightblue;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+  }
+  
+  .master-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    width: 200%;
+    max-width: 1200px;
+  }
+  .dashboard-container {
+    width: 100%;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-profile-section {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .edit-button {
+    background-color: #0073b1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    align-self: flex-end;
+    margin-right: 0%;
+    margin-left: 90%;
+  }
+  
+  .edit-button:hover {
+    background-color: #005a8e;
+  }
+  
+  .skills-section {
+    margin-bottom: 20px;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .add-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .add-section input[type="text"],
+  .add-section textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .add-section button {
+    background-color: #0073b1;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-section button:hover {
+    background-color: #005a8e;
+  }
+  container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightgray;
+  }
+  
+  

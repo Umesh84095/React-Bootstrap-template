@@ -1,0 +1,48 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .login-box {
+    background-color: #ffffff;
+    box-shadow: 10px 10px 10px rgba(1, 1, 1, 0.2);
+    padding: 20px;
+    max-width:400px;
+    height: 55%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .login-box h1 {
+    margin-bottom: 20px;
+    color: #0077b5;
+  }
+  
+  .login-box input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    align-items: center;
+  }
+  
+  .login-box button {
+    width: 76%;
+    margin-top: 50px;
+    padding: 12px;
+    background-color:#0077b5;
+    color:black;
+    border: 1px solid;
+    cursor: pointer;
+  }
+  
+  .linkedin-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  
