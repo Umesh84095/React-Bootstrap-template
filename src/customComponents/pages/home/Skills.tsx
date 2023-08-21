@@ -18,7 +18,7 @@ function Skills(props) {
   const handleDeleteSkill = (index) => {
     dispatch(deleteSkill(index));
   };
-
+console.log(skills)
   return (
     <>
       <div className="skills-section">
@@ -34,6 +34,7 @@ function Skills(props) {
                       <button onClick={() => handleDeleteSkill(index)}>
                         Delete
                       </button>
+                      console.log(skill);
                     </li>
                   ))}
                 </ul>
