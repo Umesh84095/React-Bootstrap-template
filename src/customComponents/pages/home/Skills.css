@@ -1,4 +1,12 @@
 
+.skills-division{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+
+}
 .skills-section {
     margin-bottom: 20px;
   }
@@ -13,7 +21,7 @@
     padding: 0;
     margin: 0;
   }
-  
+ 
   .skills-list-item {
     display: contents;
     /* justify-content: space-between; */
@@ -55,4 +63,3 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  

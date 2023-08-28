@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch, RootStateOrAny } from "react-redux";
 import "./Experience.css";
-import { addExperience, deleteExperience } from "../Redux/Action";
+import { addExperience, deleteExperience } from "../../../redux/actions";
 
 interface ExperienceProps {
   edit: boolean;
@@ -39,22 +39,32 @@ const Experience: React.FC<ExperienceProps> = (props) => {
           <h3>Experience</h3>
           <ul className="experience-list">
             {experience && experience.length > 0 ? (
-              <ul>
-                {experience.map((exp, index) => (
-                  <li key={index} className="experience-list-item">
-                    <div>
-                      <p>{exp.company}</p>
-                      <p>{exp.position}</p>
-                      <p>{exp.yearsWorked}</p>
-                    </div>
-                    {props.edit && (
-                      <button onClick={() => handleDeleteExperience(index)}>
-                        Delete
-                      </button>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Years Worked</th>
+                    {props.edit && <th>Action</th>}
+                  </tr>
+                </thead>
+                <tbody>
+                  {experience.map((exp, index) => (
+                    <tr key={index}>
+                      <td>{exp.company}</td>
+                      <td>{exp.position}</td>
+                      <td>{exp.yearsWorked}</td>
+                      {props.edit && (
+                        <td>
+                          <button onClick={() => handleDeleteExperience(index)}>
+                            Delete
+                          </button>
+                        </td>
+                      )}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             ) : (
               <p>No details provided </p>
             )}
@@ -78,10 +88,9 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                   }
                 }}
               />
-
               <input
                 type="text"
-                placeholder="Years Worked"
+                placeholder="Work Experience"
                 value={newExperience.yearsWorked}
                 onChange={(e) => {
                   const yearsWorked = e.target.value;
@@ -92,7 +101,6 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                   }
                 }}
               />
-
               <input
                 type="text"
                 placeholder="Position"

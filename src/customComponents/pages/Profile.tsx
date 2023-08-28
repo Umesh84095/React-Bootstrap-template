@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./Profile.css";
 import Skills from "./home/Skills";
 import Education from "./home/Education";
-import About1234 from "./home/About1234";
+// import About1234 from "./home/About";
 import { useNavigate } from "react-router-dom";
 import Experience from "./home/Experience";
+import About from "./home/About";
 
-const Profile = () => {
+const Profile = (props) => {
 
     const [editing, setEditing] = useState(false);
     useEffect(() => {
@@ -26,7 +27,7 @@ const Profile = () => {
         {(
           <button className="edit-button" onClick={handleSaveProfile}>Save</button>
         )}
-        {/* <About edit={editing}/> */}
+        <About edit={editing}/>
         <Skills edit={editing}/>
         <Education edit={editing}/>   
         <Experience edit={editing}/>

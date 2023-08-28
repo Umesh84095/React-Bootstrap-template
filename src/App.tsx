@@ -7,7 +7,7 @@ import keycloak from "./keycloak";
 import { ReactKeycloakProvider } from "@react-keycloak/web";
 import RenderOnAuthenticated from "./components/RenderOnAuthenticated";
 import { Provider } from "react-redux";
-import { store } from "./redux/store";
+import store from "./redux/store";
 import LoadSxpChat from "./components/chatWidget";
 import CONSTANTS from "./constants/constants";
 

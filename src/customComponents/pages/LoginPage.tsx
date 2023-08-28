@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginSuccess } from "./Redux/Action";
+import { loginSuccess } from "../../redux/actions";
 import './LoginPage.css'; 
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';

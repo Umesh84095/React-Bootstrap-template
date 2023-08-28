@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch, RootStateOrAny } from "react-redux";
 import "./Skills.css";
-import { addSkill, deleteSkill } from "../Redux/Action";
+import { addSkill,deleteSkill } from "../../../redux/actions";
 
 function Skills(props) {
   const skills = useSelector((state: RootStateOrAny) => state.skills);
@@ -13,6 +13,12 @@ function Skills(props) {
       dispatch(addSkill(newSkill));
       setNewSkill("");
     }
+    // const NewSkills =[
+    //   ...skills,
+    //   newSkill
+    // ]
+    // dispatch(addSkill(NewSkills));
+    // setNewSkill("");
   };
 
   const handleDeleteSkill = (index) => {
@@ -21,6 +27,7 @@ function Skills(props) {
 console.log(skills)
   return (
     <>
+    <div className="skills-division">
       <div className="skills-section">
         <h3>Skills</h3>
         {props.edit ? (
@@ -30,11 +37,11 @@ console.log(skills)
                 <ul>
                   {skills.map((skill, index) => (
                     <li key={index} className="skills-list-item">
-                      {skill.skill}
+                      {skill}
                       <button onClick={() => handleDeleteSkill(index)}>
                         Delete
                       </button>
-                      console.log(skill);
+                      {console.log(skill)}
                     </li>
                   ))}
                 </ul>
@@ -62,9 +69,10 @@ console.log(skills)
                 
               </li>
             ))}  */}
-            {/* <p>{skills.map((skill) => skill).join(", ")}</p> */}
+            <p>{skills.map((skill) => skill).join(", ")}</p>
           </ul>
         )}
+      </div>
       </div>
     </>
   );

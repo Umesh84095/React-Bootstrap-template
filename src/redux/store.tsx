@@ -1,4 +1,7 @@
-import { createStore } from 'redux';
-import { loadingActionReducer } from './reducer';
+import { createStore } from "redux";
+import { loadingActionReducer } from "./reducer";
 
-export const store = createStore(loadingActionReducer);
+
+const store = createStore(loadingActionReducer);
+
+export default store; 
